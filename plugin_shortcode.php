@@ -1,6 +1,6 @@
 <?php
 /**
-* Plugin Name: Test plugin
+* Plugin Name: Basic Shortcode plugin
 * Plugin URI: https://in.linkedin.com/
 * Description: Display content using a shortcode to insert in a page or post
 * Version: 0.1
