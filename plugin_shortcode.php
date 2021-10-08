@@ -15,8 +15,11 @@ class Wpdemo{
 	}
 	public function wpb_demo_shortcode($atts) { 
 		$a = shortcode_atts( array(
-      	'name' => ''), $atts );
-   		return 'Hello ' . $a['name'] ;
+      	'name' => '',
+      	'color' => 'blue',
+      	'position' =>'center'), $atts );
+      	$value	= '<h1 style="color:'.$a['color'].';text-align:'.$a['position'].';">Welcome '.$a['name'].'</h1>';
+   		return $value;
 	} 
 }
 $objdemo	= new Wpdemo();
