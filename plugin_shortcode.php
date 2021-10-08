@@ -1,6 +1,6 @@
 <?php
 /**
-* Plugin Name: Basic Shortcode plugin
+* Plugin Name: Display Custom text
 * Plugin URI: https://in.linkedin.com/
 * Description: Display content using a shortcode to insert in a page or post
 * Version: 0.1
@@ -14,11 +14,11 @@ class Wpdemo{
 		add_shortcode('welcome', array($this, 'wpb_demo_shortcode'));
 	}
 	public function wpb_demo_shortcode($atts) { 
-		$a = shortcode_atts( array(
+		$set_attributes = shortcode_atts( array(
       	'name' => '',
       	'color' => 'blue',
       	'position' =>'center'), $atts );
-      	$value	= '<h1 style="color:'.$a['color'].';text-align:'.$a['position'].';">Welcome '.$a['name'].'</h1>';
+      	$value	= '<h1 style="color:'.$set_attributes['color'].';text-align:'.$set_attributes['position'].';">Welcome '.$set_attributes['name'].'</h1>';
    		return $value;
 	} 
 }
